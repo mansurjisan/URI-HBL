@@ -1,19 +1,19 @@
 # URI Hurricane Boundary Layer Wind Model (URI-HBL)
 ## Overview
 
-The URI Hurricane Boundary Layer Wind Model (URI-HBL) is a high-resolution, three-dimensional numerical model designed to simulate the wind in the boundary layer in response to a prescribed upper vortex in the gradient balance and motion force. This branch implements the idealized hurricane simulation framework developed in:
+The URI Hurricane Boundary Layer Wind Model (URI-HBL) is a high-resolution, three-dimensional numerical model developed at the University of Rhode Island to simulate boundary layer winds in hurricanes, driven by a prescribed upper-level vortex in gradient balance and motion-induced forcing. This branch implements the idealized, axisymmetric hurricane simulation framework developed in:
 
 **Jisan, Mansur Ali.** *Development and Application of a Hurricane Boundary Layer Wind Model for Landfalling Hurricanes*. University of Rhode Island, 2024. https://doi.org/10.23860/diss-1640
 
-The model consists of two main components: a parametric wind field generator that creates idealized hurricane profiles and a 3D boundary layer model that resolves the detailed wind structure as hurricanes make landfall and interact with surface heterogeneity.
+The model consists of two main components: a parametric wind field generator that generates the initial and boundary conditions, and a 3D boundary layer model that simulates the wind field, including the surface and boundary layers of the hurricane. 
 
 ## Model Features and Applications
 
 This idealized hurricane simulation branch is specifically designed for:
 
 - **Landfall Studies**: Detailed analysis of hurricane boundary layer structure during landfall events
-- **Hurricane-Land Interaction**: Investigation of wind field chagnes due to the roguhness contrast between land and sea.
-- **Idealized Experiments**: Controlled studies of hurricane boundary layer evolution due to the effect land surface roughness.
+- **Hurricane-Land Interaction**: Investigation of wind field changes due to the roughness contrast between land and sea.
+- **Idealized Experiments**: Controlled studies of hurricane boundary layer evolution due to the effect of land surface roughness.
 
 
 ## Directory Structure
@@ -173,6 +173,30 @@ cd ../../../boundary_model/IDEAL/exps/1KM/
 
 # 4. Combine output files
 ./run_combine.bash
+```
+## Workflow
+
+```mermaid
+flowchart TD
+    A[Load Modules] --> B[Setup Input Files]
+    B --> C[Parametric Model]
+    C --> C1[Build & Run<br/>./build_parametric.bash<br/>./run_parametric.bash]
+    C1 --> D[Copy Output to<br/>Boundary Model INPUT]
+    D --> E[Boundary Layer Model]
+    E --> E1[Configure diag_table<br/>Build & Run<br/>./build_model.bash<br/>./run_model.bash]
+    E1 --> F[Combine Output<br/>./run_combine.bash]
+    F --> G[Final NetCDF Output]
+    
+    %% Styling
+    classDef parametric fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef boundary fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef output fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef process fill:#f5f5f5,stroke:#424242,stroke-width:2px
+    
+    class C,C1 parametric
+    class E,E1 boundary
+    class F,G output
+    class A,B,D process
 ```
 
 ## References and Citation
