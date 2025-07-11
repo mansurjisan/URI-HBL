@@ -1,5 +1,4 @@
-# URI Hurricane Boundary Layer Wind Model (URI-HBL) - Idealized Hurricane Simulation Branch
-
+# URI Hurricane Boundary Layer Wind Model (URI-HBL)
 ## Overview
 
 The URI Hurricane Boundary Layer Wind Model (URI-HBL) is a high-resolution, three-dimensional numerical model designed to simulate the wind in the boundary layer in response to a prescribed upper vortex in the gradient balance and motion force. This branch implements the idealized hurricane simulation framework developed in:
