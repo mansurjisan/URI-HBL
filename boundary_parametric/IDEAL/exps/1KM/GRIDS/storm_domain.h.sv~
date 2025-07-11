@@ -1,0 +1,12 @@
+integer, parameter :: ifplane = 0
+
+  integer, parameter :: im = 5400
+  integer, parameter :: jm = 5900
+
+  real(KIND=r4), parameter :: lonstart = -82.0
+  real(KIND=r4), parameter :: latstart =  18.0
+  real(KIND=r4), parameter :: lonend   = -74.5015 ! lonend = lonstart + (im-1)*resol
+  real(KIND=r4), parameter :: latend   =  25.4985 ! latend = latstart + (jm-1)*resol
+
+
+  real(KIND=r4), parameter :: resol  =  0.0015

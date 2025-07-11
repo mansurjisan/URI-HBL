@@ -1,0 +1,12 @@
+integer, parameter :: ifplane = 0
+
+  integer, parameter :: im = 1200
+  integer, parameter :: jm = 1200
+
+  real(KIND=r4), parameter :: lonstart = -82.0
+  real(KIND=r4), parameter :: latstart =  20.0
+  real(KIND=r4), parameter :: lonend   = -70.10243 ! lonend = lonstart + (im-1)*resol
+  real(KIND=r4), parameter :: latend   =  31.89757 ! latend = latstart + (jm-1)*resol
+
+
+  real(KIND=r4), parameter :: resol  =  0.00992291    ! resol  =  1.0 / (111.195 * cos(lat_rad)) stormcenter 25N 78W; lat_rad = lat_deg * 3.14159265359 / 180.0

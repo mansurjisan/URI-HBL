@@ -1,0 +1,7 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.13.1 Build 20240703_000000
+
+Compiler options: -I/apps/spack-managed-icelake-v1.0/oneapi-2024.2.1/netcdf-c-4.9.2-3pxp6ha3ownywf4njjvftbdnjklvrtv5/include -I/apps/spack-managed-icelake-v1.0/oneapi-2024.2.1/netcdf-fortran-4.6.1-be5dsg33uozfikd7fvfanp3bjex63ccr/include -I/apps/spack-managed-icelake-v1.0/oneapi-2024.2.1/intel-oneapi-mpi-2021.13.1-j6wkvahtymtbryuramlnxpkz7gk6n6da/mpi/2021.13/include/mpi -I/apps/spack-managed-icelake-v1.0/oneapi-2024.2.1/intel-oneapi-mpi-2021.13.1-j6wkvahtymtbryuramlnxpkz7gk6n6da/mpi/2021.13/include -I/apps/spack-managed-icelake-v1.0/oneapi-2024.2.1/intel-oneapi-mpi-2021.13.1-j6wkvahtymtbryuramlnxpkz7gk6n6da/mpi/2021.13/include/mpi -Wl,-rpath,/apps/spack-managed-icelake-v1.0/gcc-11.3.1/intel-oneapi-compilers-2024.2.1-lxeyjt37uih6bqwii4sq7juijkbccrjo/compiler/2024.2/lib -gcc-name=/usr/bin/gcc -gxx-name=/usr/bin/g++ -mcmodel=medium -diag-disable=10448 -O3 -march=native -ipo -no-prec-div -fp-model fast=2 -qopt-report=5 -qopt-report-phase=vec,loop -align array64byte -qopt-prefetch=4 -qopt-streaming-stores=always -unroll-aggressive -finline-functions -ffast-math -g -traceback -c 
