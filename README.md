@@ -134,7 +134,8 @@ This script uses `mppnccombine` to merge all individual NetCDF files into a sing
 ### Important Input Files
 
 1. **Track files**: Hurricane track data (in `INPUT/` directory)
-2. **`topog_storm_domain.nc`**: Land-sea mask data
+2. **`topog_storm_domain.nc`**: Land-sea mask data (in `INPUT/` directory).
+   - [Download `topog_storm_domain.nc`](https://drive.google.com/file/d/1Rws1owyZmNuS2us9MnDS0MDEXOlxqRKG/view?usp=drive_link)
 
 ## Output Variables
 
